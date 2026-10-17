@@ -1,11 +1,11 @@
 export function formatPhoneNumber(phoneStr: string): string {
-  const digits = phoneStr.replace(/\D/g, "");
+  const digits = phoneStr.replace(/\D/g, '');
 
   let normalized = digits;
-  if (normalized.startsWith("8") && normalized.length === 11) {
+  if (normalized.startsWith('8') && normalized.length === 11) {
     normalized = `7${normalized.slice(1)}`;
   }
-  if (normalized.startsWith("+7") && normalized.length === 12) {
+  if (normalized.startsWith('+7') && normalized.length === 12) {
     normalized = normalized.slice(1);
   }
   if (normalized.length === 10) {
