@@ -3,13 +3,13 @@ export function formatPhoneNumber(phoneStr: string): string {
 
   let normalized = digits;
   if (normalized.startsWith("8") && normalized.length === 11) {
-    normalized = "7" + normalized.slice(1);
+    normalized = `7${normalized.slice(1)}`;
   }
   if (normalized.startsWith("+7") && normalized.length === 12) {
     normalized = normalized.slice(1);
   }
   if (normalized.length === 10) {
-    normalized = "7" + normalized;
+    normalized = `7${normalized}`;
   }
 
   const last10 = normalized.slice(-10);
